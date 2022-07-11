@@ -1,4 +1,4 @@
-package dev.letsdebug.sort.selection;
+package dev.letsdebug.sort.insertion;
 
 import dev.letsdebug.provider.SortEvenCountArgumentsProvider;
 import dev.letsdebug.provider.SortOddCountArgumentsProvider;
@@ -8,23 +8,23 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.ArgumentsSources;
 
 /**
- * Junit test for Selection Sort
+ * Junit test for Insertion Sort
  */
-public class SelectionSortTest {
+public class InsertionSortTest {
 
   /**
-   * Test for {@link SelectionSort#sort(Comparable[]) sort} method.
+   * Test for {@link InsertionSort#sort(Comparable[]) sort} method.
    *
    * @param input array to sort
    * @param expectedOutput expected output
    */
   @ParameterizedTest(name = "input {index} - {0}")
   @ArgumentsSources({
-    @ArgumentsSource(SortOddCountArgumentsProvider.class),
-    @ArgumentsSource(SortEvenCountArgumentsProvider.class)
+    @ArgumentsSource(SortEvenCountArgumentsProvider.class),
+    @ArgumentsSource(SortOddCountArgumentsProvider.class)
   })
   void sort(String[] input, String[] expectedOutput) {
-    SelectionSort.sort(input); // method under test
+    InsertionSort.sort(input); // method under test
     Assertions.assertArrayEquals(input, expectedOutput);
   }
 }
