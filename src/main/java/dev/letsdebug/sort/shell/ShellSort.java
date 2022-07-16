@@ -3,7 +3,6 @@ package dev.letsdebug.sort.shell;
 import dev.letsdebug.sort.UtilFunctions;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -13,7 +12,6 @@ import java.util.function.Supplier;
  * @author Harshad S
  */
 public class ShellSort {
-
   /**
    * Shell sort algorithm implementation.
    *
@@ -23,12 +21,14 @@ public class ShellSort {
    */
   private static <OBJ extends Comparable<OBJ>> void sort(
       OBJ[] data, Supplier<List<Integer>> gapSeqSupplier) {
-
     int n = data.length;
     List<Integer> gapSequence = gapSeqSupplier.get();
     gapSequence.forEach(
         (gap -> {
-          // insertion sort.
+          /*
+           insertion sort.
+           h-sort/gap-sort the array
+          */
           for (int i = gap; i < n; i++)
             for (int j = i; j >= gap && UtilFunctions.less(data[j], data[j - gap]); j -= gap)
               UtilFunctions.swap(data, j, j - gap);

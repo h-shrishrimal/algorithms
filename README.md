@@ -5,8 +5,9 @@
 Java implementation of various data structures and algorithms
 
 | Sorting Algorithms 	 |
-|----------------------|
-| SelectionSort 	      |
-| InsertionSort 	      |
-| ShellSort 	          |
-
+|-------------|
+| SelectionSort 	 |
+| InsertionSort 	 |
+| ShellSort 	 |
+| MergeSort (Top Down) 	 |
+| MergeSort (Bottom Up)	 |
