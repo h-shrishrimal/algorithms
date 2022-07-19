@@ -54,7 +54,7 @@ public class TopDownMergeSort {
   private static void mergeSort(Comparable[] data, Comparable[] aux, int lo, int hi) {
 
     if (lo >= hi) return; // exit condition
-    int mid = lo + (hi - lo) / 2; // sub-divide the array
+    int mid = lo + (hi - lo) / 2; // midpoint, sub-divide the array
 
     // recursively sort the sub-arrays
     mergeSort(data, aux, lo, mid);

@@ -7,6 +7,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.ArgumentsSources;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 /** Junit test for Merge Sort */
 public class BottomUpMergeSortTest {
   /**
@@ -15,7 +18,7 @@ public class BottomUpMergeSortTest {
    * @param input array to sort
    * @param expectedOutput expected output
    */
-  @ParameterizedTest(name = "input {index} - {0}")
+  @ParameterizedTest(name = "input {index} - {0} - {1}")
   @ArgumentsSources({
     @ArgumentsSource(SortEvenCountArgumentsProvider.class),
     @ArgumentsSource(SortOddCountArgumentsProvider.class)
@@ -31,7 +34,7 @@ public class BottomUpMergeSortTest {
    * @param input array to sort
    * @param expectedOutput expected output
    */
-  @ParameterizedTest(name = "input {index} - {0}")
+  @ParameterizedTest(name = "input {index} - {0} - {1}")
   @ArgumentsSources({
     @ArgumentsSource(SortEvenCountArgumentsProvider.class),
     @ArgumentsSource(SortOddCountArgumentsProvider.class)
@@ -48,7 +51,7 @@ public class BottomUpMergeSortTest {
    * @param input array to sort
    * @param expectedOutput expected output
    */
-  @ParameterizedTest(name = "input {index} - {0}")
+  @ParameterizedTest(name = "input {index} - {0} - {1}")
   @ArgumentsSources({
     @ArgumentsSource(SortEvenCountArgumentsProvider.class),
     @ArgumentsSource(SortOddCountArgumentsProvider.class)

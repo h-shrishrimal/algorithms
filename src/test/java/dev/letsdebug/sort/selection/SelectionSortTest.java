@@ -18,7 +18,7 @@ public class SelectionSortTest {
    * @param input array to sort
    * @param expectedOutput expected output
    */
-  @ParameterizedTest(name = "input {index} - {0}")
+  @ParameterizedTest(name = "input {index} - {0} - {1}")
   @ArgumentsSources({
     @ArgumentsSource(SortOddCountArgumentsProvider.class),
     @ArgumentsSource(SortEvenCountArgumentsProvider.class)

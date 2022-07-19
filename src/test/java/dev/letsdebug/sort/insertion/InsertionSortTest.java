@@ -18,7 +18,7 @@ public class InsertionSortTest {
    * @param input array to sort
    * @param expectedOutput expected output
    */
-  @ParameterizedTest(name = "input {index} - {0}")
+  @ParameterizedTest(name = "input {index} - {0} - {1} - {1}")
   @ArgumentsSources({
     @ArgumentsSource(SortEvenCountArgumentsProvider.class),
     @ArgumentsSource(SortOddCountArgumentsProvider.class)
