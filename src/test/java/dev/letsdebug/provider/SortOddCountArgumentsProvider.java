@@ -12,7 +12,14 @@ public class SortOddCountArgumentsProvider implements ArgumentsProvider {
   @Override
   public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext)
       throws Exception {
-    return Arrays.stream(DATA_ODD_COUNT).map(input -> Arguments.of(input, EXPECTED_OUTPUT));
+    return Arrays.stream(DATA_ODD_COUNT)
+        .map(
+            input -> {
+              int n = input.length;
+              String[] data = new String[n];
+              for (int i = 0; i < input.length; i++) data[i] = input[i];
+              return Arguments.of(data, EXPECTED_OUTPUT);
+            });
   }
 
   private static final String[] EXPECTED_OUTPUT = {"a", "b", "c", "d", "e"};

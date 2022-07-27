@@ -2,6 +2,11 @@ package dev.letsdebug.sort.merge;
 
 import dev.letsdebug.sort.UtilFunctions;
 
+/**
+ * Implementation of bottom-up merge sort algorithm.
+ *
+ * @author Harshad S
+ */
 public class BottomUpMergeSort {
 
   private BottomUpMergeSort() {}
