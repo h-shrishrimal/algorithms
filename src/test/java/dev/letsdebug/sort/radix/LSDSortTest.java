@@ -10,7 +10,7 @@ import java.util.Collections;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /** Junit test for LSD Radix Sort */
-public class LSDSortTest {
+class LSDSortTest {
 
   /** Test for {@link LSDSort#sort(String[])} method. */
   @Test

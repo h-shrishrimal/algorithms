@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.ArgumentsSources;
 /**
  * Junit test for Insertion Sort
  */
-public class InsertionSortTest {
+class InsertionSortTest {
 
   /**
    * Test for {@link InsertionSort#sort(Comparable[]) sort} method.

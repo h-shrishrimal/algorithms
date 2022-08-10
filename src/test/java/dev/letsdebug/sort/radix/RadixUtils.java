@@ -15,6 +15,37 @@ final class RadixUtils {
     fail("The arrays are equal");
   }
 
+  static String[] VARIABLE_LENGTH_SORTED_DATA =
+          new String[] {
+                  "sab", "sac", "sack", "sad", "sae", "safe", "sag", "saga", "sage", "said", "sail", "saint",
+                  "sake", "sal", "salad", "sale", "sally", "salt", "same", "san", "sand", "sandy", "sang",
+                  "sank", "sap", "sat", "sau", "sauce", "save", "saw", "sax", "say", "saz", "sbe", "sbw",
+                  "scale", "scan", "scar", "scb", "scd", "scene", "sci", "scm", "scope", "score", "scot",
+                  "scr", "scrap", "sdk", "sea", "seal", "seat", "sec", "see", "seed", "seek", "seem", "seen",
+                  "seg", "sei", "sel", "self", "sell", "semi", "sen", "send", "sense", "sent", "sep", "sept",
+                  "ser", "serve", "set", "seven", "sew", "sex", "sexy", "sez", "sfz", "sgt", "sha", "shade",
+                  "shah", "shake", "shall", "shame", "shape", "share", "sharp", "she", "shed", "sheep",
+                  "sheer", "sheet", "shelf", "shell", "shh", "shift", "ship", "shirt", "shit", "sho", "shock",
+                  "shoe", "shook", "shoot", "shop", "shore", "short", "shot", "show", "shown", "shp", "sht",
+                  "shut", "shy", "sib", "sic", "sick", "side", "sif", "sigh", "sight", "sign", "sik", "silk",
+                  "silly", "sim", "sin", "since", "sing", "sink", "sip", "sir", "sis", "sit", "site", "siv",
+                  "six", "sixth", "sixty", "size", "sized", "ska", "ski", "skill", "skin", "skip", "sky",
+                  "slab", "slam", "slap", "sleep", "slid", "slide", "slim", "slip", "slot", "slow", "sly",
+                  "small", "smart", "smell", "smile", "smith", "smoke", "sms", "snap", "snow", "snr", "soap",
+                  "soar", "sob", "soc", "sod", "soda", "sofa", "soft", "soh", "soil", "sol", "solar", "sold",
+                  "sole", "solid", "solo", "solve", "som", "some", "son", "song", "soon", "sop", "sore",
+                  "sorry", "sort", "sos", "sot", "sou", "soul", "sound", "soup", "sour", "south", "sow",
+                  "sox", "soy", "soz", "spa", "space", "span", "spare", "speak", "speed", "spell", "spend",
+                  "spent", "spin", "spit", "split", "spoke", "sport", "spot", "spray", "spun", "spur", "spy",
+                  "squad", "sra", "srb", "sri", "srn", "ssd", "sta", "stack", "staff", "stage", "stake",
+                  "stamp", "stand", "star", "start", "state", "stay", "ste", "steam", "steel", "steep",
+                  "stem", "step", "stick", "stiff", "still", "stir", "stk", "stock", "stone", "stood", "stop",
+                  "store", "storm", "story", "strip", "stuck", "study", "stuff", "sty", "style", "sub",
+                  "such", "suck", "sud", "sue", "sugar", "sui", "suit", "suite", "suk", "sum", "sun", "sung",
+                  "sunk", "sup", "super", "suq", "sur", "sure", "surf", "surge", "sus", "swan", "swap",
+                  "sway", "sweep", "sweet", "swept", "swift", "swim", "swing", "syn"
+          };
+
   static final String[] SORTED_DATA =
       new String[] {
         "able", "acid", "aged", "also", "area", "army", "away", "baby", "back", "ball", "band",

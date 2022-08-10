@@ -11,7 +11,7 @@ import java.sql.SQLOutput;
 import java.util.Arrays;
 
 /** Junit test for Merge Sort */
-public class BottomUpMergeSortTest {
+class BottomUpMergeSortTest {
   /**
    * Test for {@link BottomUpMergeSort#sort(Comparable[]) sort} method.
    *
