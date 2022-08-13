@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.ArgumentsSources;
 
 /** Junit test for Merge Sort */
-public class TopDownMergeSortTest {
+class TopDownMergeSortTest {
   /**
    * Test for {@link TopDownMergeSort#sort(Comparable[]) sort} method.
    *

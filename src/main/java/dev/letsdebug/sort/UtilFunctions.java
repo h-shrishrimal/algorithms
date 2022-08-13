@@ -131,4 +131,33 @@ public final class UtilFunctions {
       }
     }
   }
+
+  /**
+   * max-heapify an array
+   *
+   * @param arr - data
+   * @param n - size of heap
+   * @param i - array index. Represents sub-tree rooted at node i.
+   */
+  public static <OBJ extends Comparable<OBJ>> void heapify(OBJ[] arr, int n, int i) {
+
+    int currentLargestIdx = i;
+    int j = 2 * i;
+    int lChildIdx = j + 1;
+    int rChildIdx = j + 2;
+
+    // compare the current largest with left child
+    if (lChildIdx < n && UtilFunctions.less(arr[currentLargestIdx], arr[lChildIdx]))
+      currentLargestIdx = lChildIdx;
+
+    // compare the current largest with right child
+    if (rChildIdx < n && UtilFunctions.less(arr[currentLargestIdx], arr[rChildIdx]))
+      currentLargestIdx = rChildIdx;
+
+    // this if condition also acts as exit condition for recursion
+    if (i != currentLargestIdx) {
+      UtilFunctions.swap(arr, i, currentLargestIdx);
+      heapify(arr, n, currentLargestIdx); // after swapping; heapify the affected sub-tree
+    }
+  }
 }

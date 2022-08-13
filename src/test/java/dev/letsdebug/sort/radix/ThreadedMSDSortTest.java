@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /** Junit test for MSD Radix Sort */
-public class ThreadedMSDSortTest {
+class ThreadedMSDSortTest {
 
   /** Test for {@link ThreadedMSDSort#sort(String[])} method. */
   @Test

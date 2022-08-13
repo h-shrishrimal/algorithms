@@ -11,6 +11,8 @@ Java implementation of various data structures and algorithms
 | ShellSort 	                            |
 | MergeSort (Top Down) 	                 |
 | MergeSort (Bottom Up)	                 |
+| MergeSort with in-place merge	         |
+| HeapSort	                              |
 | Radix Sort (LSD) 	                     |
 | Radix Sort (MSD)	                      |
 | Radix Sort (MSD) with ForkJoinPool     |
