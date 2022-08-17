@@ -1,4 +1,4 @@
-package dev.letsdebug.provider;
+package dev.letsdebug.sort.provider;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;

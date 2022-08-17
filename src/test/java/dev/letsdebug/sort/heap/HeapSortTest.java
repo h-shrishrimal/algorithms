@@ -1,8 +1,8 @@
 package dev.letsdebug.sort.heap;
 
-import dev.letsdebug.provider.SortEvenCountArgumentsProvider;
-import dev.letsdebug.provider.SortOddCountArgumentsProvider;
 import dev.letsdebug.sort.insertion.InsertionSort;
+import dev.letsdebug.sort.provider.SortEvenCountArgumentsProvider;
+import dev.letsdebug.sort.provider.SortOddCountArgumentsProvider;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;

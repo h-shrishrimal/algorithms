@@ -1,14 +1,11 @@
 package dev.letsdebug.sort.merge;
 
-import dev.letsdebug.provider.SortEvenCountArgumentsProvider;
-import dev.letsdebug.provider.SortOddCountArgumentsProvider;
+import dev.letsdebug.sort.provider.SortEvenCountArgumentsProvider;
+import dev.letsdebug.sort.provider.SortOddCountArgumentsProvider;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.ArgumentsSources;
-
-import java.sql.SQLOutput;
-import java.util.Arrays;
 
 /** Junit test for Merge Sort */
 class BottomUpMergeSortTest {

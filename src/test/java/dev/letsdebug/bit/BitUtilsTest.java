@@ -1,8 +1,6 @@
-package dev.letsdebug.sort.bit;
+package dev.letsdebug.bit;
 
-import dev.letsdebug.bit.BitUtils;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -118,7 +116,6 @@ public class BitUtilsTest {
   @CsvSource({"15,0,1,0,1100", "15,1,2,0,1001"})
   void replaceBitsInRangeTest(int num, int i, int j, int val, String expectedInBinary) {
     int actual = BitUtils.replaceBitsInRange(num, i, j, val);
-    System.out.println("Integer.toBinaryString(actual) = " + Integer.toBinaryString(actual));
     Assertions.assertEquals(expectedInBinary, Integer.toBinaryString(actual));
   }
 }
