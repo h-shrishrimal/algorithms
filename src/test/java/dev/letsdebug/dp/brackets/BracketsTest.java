@@ -1,9 +1,8 @@
-package dev.letsdebug.dp;
+package dev.letsdebug.dp.brackets;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.ArrayList;
@@ -15,25 +14,27 @@ public class BracketsTest {
 
   @ParameterizedTest(name = "input: {0}")
   @MethodSource("testData")
-  void generateParenthesisRecursive_1(final int n, final String expected) {
+  void bracketsRecursive(final int n, final String expected) {
 
     // remove spaces and split the string
     final String[] expectedAsArray = expected.replaceAll("\\s+", "").split(",");
     // method under test
     final List<String> actual = new ArrayList<>();
-    Brackets.generateParenthesisRecursive_1(n, (s -> actual.add(s)));
+    IBrackets sut = new BracketsRecursive();
+    sut.balancedParentheses(n, (s -> actual.add(s))); // method under test
     // assertions
     Assertions.assertArrayEquals(expectedAsArray, actual.toArray(new String[actual.size()]));
   }
 
   @ParameterizedTest(name = "input: {0}")
   @MethodSource("testData")
-  void generateParenthesesIterative(final int n, final String expected) {
+  void bracketsMemo(final int n, final String expected) {
     // remove spaces and split the string
     final String[] expectedAsArray = expected.replaceAll("\\s+", "").split(",");
     // method under test
     final List<String> actual = new ArrayList<>();
-    Brackets.generateParenthesesIterative(n, (s -> actual.add(s)));
+    IBrackets sut = new BracketsMemo();
+    sut.balancedParentheses(n, (s -> actual.add(s)));
     // assertions
     Assertions.assertEquals(actual.size(), expectedAsArray.length);
     Arrays.stream(expectedAsArray).forEach(str -> Assertions.assertTrue(actual.contains(str)));
@@ -41,12 +42,27 @@ public class BracketsTest {
 
   @ParameterizedTest(name = "input: {0}")
   @MethodSource("testData")
-  void generateParenthesisRecursive_2(final int n, final String expected) {
+  void bracketsWithoutMemo(final int n, final String expected) {
     // remove spaces and split the string
     final String[] expectedAsArray = expected.replaceAll("\\s+", "").split(",");
     // method under test
     final List<String> actual = new ArrayList<>();
-    Brackets.generateParenthesisRecursive_2(n, (s -> actual.add(s)));
+    IBrackets sut = new BracketsWithoutMemo();
+    sut.balancedParentheses(n, (s -> actual.add(s)));
+    // assertions
+    Assertions.assertEquals(actual.size(), expectedAsArray.length);
+    Arrays.stream(expectedAsArray).forEach(str -> Assertions.assertTrue(actual.contains(str)));
+  }
+
+  @ParameterizedTest(name = "input: {0}")
+  @MethodSource("testData")
+  void bracketsIterative(final int n, final String expected) {
+    // remove spaces and split the string
+    final String[] expectedAsArray = expected.replaceAll("\\s+", "").split(",");
+    // method under test
+    final List<String> actual = new ArrayList<>();
+    IBrackets sut = new BracketsIterative();
+    sut.balancedParentheses(n, (s -> actual.add(s))); // method under test
     // assertions
     Assertions.assertEquals(actual.size(), expectedAsArray.length);
     Arrays.stream(expectedAsArray).forEach(str -> Assertions.assertTrue(actual.contains(str)));
@@ -65,6 +81,3 @@ public class BracketsTest {
             "((((())))), (((()()))), (((())())), (((()))()), (((())))(), ((()(()))), ((()()())), ((()())()), ((()()))(), ((())(())), ((())()()), ((())())(), ((()))(()), ((()))()(), (()((()))), (()(()())), (()(())()), (()(()))(), (()()(())), (()()()()), (()()())(), (()())(()), (()())()(), (())((())), (())(()()), (())(())(), (())()(()), (())()()(), ()(((()))), ()((()())), ()((())()), ()((()))(), ()(()(())), ()(()()()), ()(()())(), ()(())(()), ()(())()(), ()()((())), ()()(()()), ()()(())(), ()()()(()), ()()()()()"));
   }
 }
-
-// (())()
-// ()(())
