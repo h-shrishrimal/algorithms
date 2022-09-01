@@ -31,9 +31,11 @@ Java implementation of various data structures and algorithms
 | replace bits in range |
 | input is odd or even  |
 
-| Dynamic Programming                      |
-|------------------------------------------|
-| All combinations of balanced parentheses |
+| Dynamic Programming                                    |
+|--------------------------------------------------------|
+| All combinations of balanced parentheses - Recursive   |
+| All combinations of balanced parentheses - Iterative   |
+| All combinations of balanced parentheses - Memoization |
 
 
 
