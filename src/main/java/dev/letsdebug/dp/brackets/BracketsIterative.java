@@ -2,6 +2,12 @@ package dev.letsdebug.dp.brackets;
 
 import java.util.function.Consumer;
 
+/**
+ * Print all combinations of balanced parentheses.
+ * This implementation uses iterative approach
+ *
+ * @author Harshad S
+ */
 public class BracketsIterative implements IBrackets {
 
   /**

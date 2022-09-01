@@ -2,6 +2,12 @@ package dev.letsdebug.dp.brackets;
 
 import java.util.function.Consumer;
 
+/**
+ * Print all combinations of balanced parentheses. This implementation uses recursion without
+ * memoization
+ *
+ * @author Harshad S
+ */
 public final class BracketsRecursive implements IBrackets {
   @Override
   public void balancedParentheses(int n, Consumer<String> cb) {

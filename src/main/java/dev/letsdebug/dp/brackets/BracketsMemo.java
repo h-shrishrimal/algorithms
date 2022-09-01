@@ -3,6 +3,12 @@ package dev.letsdebug.dp.brackets;
 import java.util.*;
 import java.util.function.Consumer;
 
+/**
+ * Print all combinations of balanced parentheses.
+ * This implementation uses memoization
+ *
+ * @author Harshad S
+ */
 public class BracketsMemo implements IBrackets {
 
   private Map<Integer, List<String>> table;
